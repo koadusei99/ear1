@@ -94,7 +94,7 @@ body {
   margin-right: 13px;
 }
 .content-text {
-  margin-top: 200px;
+  margin-top: 130px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -439,7 +439,7 @@ body {
 }
 .footer .inner {
   padding: 60px 0 60px 0;
-  display: flex;
+  /* display: flex; */
   color: #121212;
 }
 .footer .hd {
@@ -450,29 +450,30 @@ body {
 .footer .hd span {
   font-weight: 600;
 }
-.footer .right {
-  width: 100%;
-  padding-left: 100px;
+
+.footer .fform {
+  max-width: 890px;
+  margin-left: auto;
 }
-.footer .right .inline-form {
+.footer .inline-form {
   display: flex;
   width: 100%;
   margin: 24px 0 80px 0;
 }
-.footer .right input,
-.footer .right button {
+.footer .fform input,
+.footer .fform button {
   height: 56px;
   border: none;
   padding: 13px 16px;
 }
-.footer .right input {
+.footer .fform input {
   font-size: 20px;
   line-height: 150%;
   width: 100%;
   border: 1px solid rgba(18, 18, 18, 0.3);
   border-radius: 10px 0 0 10px;
 }
-.footer .right button {
+.footer .fform button {
   font-size: 20px;
   line-height: 150%;
   width: 180px;
@@ -484,16 +485,20 @@ body {
   line-height: 100%;
   letter-spacing: 0.2em;
 }
-.footer .left {
-  height: fit-content;
-  margin: auto 0;
+.footer .right {
+  display: flex;
 }
+
 .footer .socials {
   margin-top: 30px;
   display: flex;
   gap: 24px;
+  order: -1;
 }
 .fnav {
+  padding-left: 80px;
+  /* max-width: 890px; */
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
@@ -525,6 +530,9 @@ body {
   overflow-x: hidden;
 }
 @media screen and (max-width: 765px) {
+  .content-text {
+    margin-top: 90px;
+  }
   .ham-label {
     display: flex;
   }
@@ -681,12 +689,13 @@ body {
     gap: 50px;
   }
   .footer .right {
-    order: -1;
-    padding: 0;
+    flex-direction: column;
   }
+
   .fnav {
     flex-direction: column;
     gap: 50px;
+    padding-left: 0;
   }
 
   .fnav ul {
@@ -705,5 +714,14 @@ body {
     font-size: 16px;
     letter-spacing: 0.02em;
     margin: 0;
+  }
+  .footer .hd {
+    font-size: 24px;
+  }
+  .footer .fform input {
+    font-size: 16px;
+  }
+  .socials {
+    margin-bottom: 50px;
   }
 }
